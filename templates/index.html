@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberAI Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #0b1123;
+            color: #ffffff;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #12192b;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .navbar h1 {
+            font-size: 1.8rem;
+            color: #ffffff;
+            margin: 0;
+        }
+
+        .navbar .buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .navbar button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar .login {
+            background-color: transparent;
+            border: 2px solid #fff;
+            color: #fff;
+        }
+
+        .navbar .login:hover {
+            background-color: #ffffff;
+            color: #12192b;
+        }
+
+        .navbar .register {
+            background-color: #007bff;
+            color: #ffffff;
+        }
+
+        .navbar .register:hover {
+            background-color: #0056b3;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 80vh;
+            background: linear-gradient(180deg, #0b1123, #12192b);
+            padding: 20px;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #c2c2c2;
+            margin-bottom: 30px;
+        }
+
+        .hero img {
+            width: 300px;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 20px;
+            background-color: #12192b;
+            color: #c2c2c2;
+        }
+
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <h1>CyberAI Platform</h1>
+        <div class="buttons">
+            <button class="login" onclick="location.href='/login'">Login</button>
+            <button class="register" onclick="location.href='/register'">Register</button>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h2>Welcome to CyberAI</h2>
+        <p>Train and enhance your cybersecurity skills with hands-on exercises and challenges.</p>
+        <!--<img src="https://via.placeholder.com/300x200" alt="Hero Image">-->
+    </div>
+
+</body>
+</html>

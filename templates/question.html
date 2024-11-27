@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #0b1123;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #1e2a3d;
+            border-radius: 10px;
+            padding: 20px 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #00bfff;
+        }
+
+        .options {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .options label {
+            display: flex;
+            align-items: center;
+            background-color: #2a3b55;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .options label:hover {
+            background-color: #3c4f6e;
+        }
+
+        .options label.active {
+            background-color: #007bff;
+            color: white;
+            transform: scale(1.02);
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        .option-marker {
+            font-weight: bold;
+            margin-right: 10px;
+            color: #00bfff;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        // Şık seçildiğinde vurgulama işlemi
+        function activateOption(event) {
+            // Önce tüm seçeneklerden 'active' sınıfını kaldır
+            const options = document.querySelectorAll('.options label');
+            options.forEach(option => option.classList.remove('active'));
+
+            // Seçilen şıkkın etiketine 'active' sınıfını ekle
+            event.target.closest('label').classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>{{ question['question'] }}</h1>
+        <form method="POST">
+            <div class="options">
+                {% for index, option in enumerate(question['options']) %}
+                    <label onclick="activateOption(event)">
+                        <span class="option-marker">{{ ['A', 'B', 'C', 'D'][index] }}</span>
+                        <input type="radio" name="answer" value="{{ option }}" required>
+                        {{ option }}
+                    </label>
+                {% endfor %}
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

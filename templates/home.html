@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn - Hands-on Hacking</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #0b1123;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #12192b;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .learning-paths {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #1e2a3d;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #00bfff;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .card p {
+            color: #c2c2c2;
+            font-size: 14px;
+        }
+
+        .status {
+            margin-top: 15px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .status.ready {
+            color: #00ff00;
+        }
+
+        .status.in-progress {
+            color: #ff6347;
+        }
+
+        .card a {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            font-weight: bold;
+            margin-top: 15px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            border-radius: 5px;
+        }
+
+        .card a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Learn - Hands-on Hacking
+    </header>
+    <div class="container">
+        <h2>Learning Paths</h2>
+        <div class="learning-paths">
+            <!-- Her bir kart dinamik olarak bir konuya yönlendirilir -->
+            <div class="card">
+                <h3>Cyber Security 101</h3>
+                <p>A primer on the fundamentals of cybersecurity.</p>
+                <div class="status ready">Ready</div>
+                <a href="/start/Cyber%20Security%20101">Start Learning</a>
+            </div>
+            <div class="card">
+                <h3>SOC Level 1</h3>
+                <p>Learn about the skills needed to work as a Security Operations Center analyst.</p>
+                <div class="status in-progress">In Progress</div>
+                <a href="/start/SOC%20Level%201">Start Learning</a>
+            </div>
+            <div class="card">
+                <h3>DevSecOps</h3>
+                <p>Gain expertise in combining development, security, and operations.</p>
+                <div class="status in-progress">In Progress</div>
+                <a href="/start/DevSecOps">Start Learning</a>
+            </div>
+            <div class="card">
+                <h3>Web Fundamentals</h3>
+                <p>A pathway to web application security.</p>
+                <div class="status ready">Ready</div>
+                <a href="/start/Web%20Fundamentals">Start Learning</a>
+            </div>
+            <div class="card">
+                <h3>Web Application Pentesting</h3>
+                <p>Advanced web application pentesting techniques.</p>
+                <div class="status in-progress">In Progress</div>
+                <a href="/start/Web%20Application%20Pentesting">Start Learning</a>
+            </div>
+            <div class="card">
+                <h3>Network</h3>
+                <p>Learn about network security fundamentals.</p>
+                <div class="status ready">Ready</div>
+                <a href="/start/Network">Start Learning</a>
+            </div>
+            <div class="card">
+                <h3>Linux</h3>
+                <p>Master the basics of Linux for security professionals.</p>
+                <div class="status ready">Ready</div>
+                <a href="/start/Linux">Start Learning</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
