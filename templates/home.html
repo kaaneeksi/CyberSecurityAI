@@ -94,16 +94,24 @@
     <header>
         Learn - Hands-on Hacking
     </header>
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="{{ url_for('evaluation') }}">
+            <button style="padding: 10px 20px; background-color: #00bfff; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">
+                View My Progress
+            </button>
+        </a>
+    </div>
+
     <div class="container">
         <h2>Learning Paths</h2>
         <div class="learning-paths">
             <!-- Her bir kart dinamik olarak bir konuya yönlendirilir -->
             <div class="card">
                 <h3>Cyber Security 101</h3>
-                <p>A primer on the fundamentals of cybersecurity.</p>
-                <div class="status ready">Ready</div>
-                <a href="/start/Cyber%20Security%20101">Start Learning</a>
+                <p>Learn the basics of cybersecurity.</p>
+                <a href="{{ url_for('learn_topic', topic='Cyber Security 101') }}">Learn More</a>
             </div>
+
             <div class="card">
                 <h3>SOC Level 1</h3>
                 <p>Learn about the skills needed to work as a Security Operations Center analyst.</p>
